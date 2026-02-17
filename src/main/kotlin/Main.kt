@@ -1,4 +1,4 @@
-package com.group7
+package com.example
 
 import com.group7.dsl.arrivals
 import com.group7.dsl.buildScenario
@@ -17,6 +17,7 @@ import com.group7.policies.fork.LeastFullForkPolicy
 import com.group7.policies.generic_fj.RandomPolicy
 import com.group7.policies.generic_fj.forkPolicy
 import com.group7.properties.Queue
+import com.group7.runSimulations
 import kotlin.time.Duration.Companion.days
 import kotlin.time.Duration.Companion.minutes
 
@@ -25,7 +26,8 @@ fun main() {
         mapOf(
             "Random" to demoPort(forkPolicy(RandomPolicy())),
             "JSQ" to demoPort(LeastFullForkPolicy())
-        ), 20.days
+        ),
+        20.days,
     )
 }
 

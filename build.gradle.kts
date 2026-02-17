@@ -2,6 +2,7 @@ plugins {
     kotlin("jvm") version "2.3.0"
     id("org.jetbrains.compose") version "1.10.0"
     id("org.jetbrains.kotlin.plugin.compose") version "2.3.0"
+    application
 }
 
 group = "com.group7"
@@ -23,4 +24,8 @@ kotlin {
     compilerOptions {
         freeCompilerArgs.addAll("-Xcontext-parameters")
     }
+}
+
+application {
+    mainClass = "com.example.MainKt"
 }
