@@ -16,7 +16,7 @@ repositories {
 
 dependencies {
     implementation(compose.desktop.currentOs)
-    implementation("com.github.PortSim.SimPort:api:123deee4e9")
+    implementation("com.github.PortSim.SimPort:api:f07630c343")
 }
 
 kotlin {

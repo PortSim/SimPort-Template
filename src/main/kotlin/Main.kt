@@ -14,9 +14,9 @@ import com.group7.dsl.trackGlobal
 import com.group7.dsl.withMetrics
 import com.group7.generators.Delays
 import com.group7.generators.Generators
-import com.group7.metrics.Latency
 import com.group7.metrics.Occupancy
 import com.group7.metrics.ResidenceTime
+import com.group7.metrics.Throughput
 import com.group7.runSimulations
 import com.group7.utils.thenSubnetwork
 import kotlin.time.Duration
@@ -68,7 +68,7 @@ private fun demoPort(
     .withMetrics { 
         trackGlobal(Occupancy)
         trackGlobal(ResidenceTime)
-        trackGlobal(Latency)
+        trackGlobal(Throughput)
     }
 
 private fun <T> NodeBuilder<T, *>.thenQueueAndGates(
